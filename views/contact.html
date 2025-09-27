@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <section>
+        <h1>CONTACT</h1>
+        <h2>
+            Feel free to e-mail me at
+            <a href="mailto:me@catalinbesleaga.co">me@catalinbesleaga.co</a>
+            <br>
+        </h2>
+        <div class="location">
+            <a href="https://www.google.com/maps/place/Iasi/" target="_blank" rel="noopener noreferrer">
+                <i class="icon pin"></i>
+            </a>
+            <h3 style="text-align: left">Romania
+                <br>
+                <strong>Iasi RO</strong>
+            </h3>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/catalinbesleaga01/" target="_blank" rel="noopener noreferrer" class="icon linkedin">
+                <svg class="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <polygon class="hexagon" points="47,37.5 25,50 3,37.5 3,12.5 25,0 47,12.5" />
+                </svg>
+            </a>
+            <a href="https://t.me/zeroxcatalin" target="_blank" rel="noopener noreferrer" class="icon telegram">
+                <svg class="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <polygon class="hexagon" points="47,37.5 25,50 3,37.5 3,12.5 25,0 47,12.5" />
+                </svg>
+            </a>
+            <!-- <a href="http://codepen.io/clatti/" target="_blank" rel="noopener noreferrer" class="icon codepen">
+                <svg class="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <polygon class="hexagon" points="47,37.5 25,50 3,37.5 3,12.5 25,0 47,12.5" />
+                </svg>
+            </a> -->
+            <a href="skype:catalinbesleaga98?userinfo" target="_blank" rel="noopener noreferrer" class="icon skype">
+                <svg class="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <polygon class="hexagon" points="47,37.5 25,50 3,37.5 3,12.5 25,0 47,12.5" />
+                </svg>
+            </a>
+        </div>
+        <form name="contact" contact-form ng-submit="Form.sendForm(contact.$valid)" novalidate>
+            <input type="text" name="name" placeholder="Name" ng-model="Form.data.name" ng-class="{ 'invalid': contact.name.$invalid && Form.submitted, 'valid': contact.name.$valid && Form.submitted }"
+                required>
+            <input type="email" name="email" placeholder="Email" ng-model="Form.data.email" ng-pattern="Form.emailRegex"
+                ng-class="{ 'invalid': contact.email.$invalid && Form.submitted, 'valid': contact.email.$valid && Form.submitted }"
+                required>
+            <textarea name="message" placeholder="Message..." ng-model="Form.data.message" ng-class="{ 'invalid': contact.message.$invalid && Form.submitted, 'valid': contact.message.$valid && Form.submitted }"
+                required></textarea>
+            <button type="submit" class="button">
+                <span class="hex-l-r">
+                    <span class="text">SEND</span>
+                </span>
+            </button>
+            <p class="message" ng-class="{ 'error': Form.success === false }">{{ Form.message }}</p>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie v8" itemscope itemtype="http://schema.org/Person" ng-controller="MainCtrl as Main"><![endif]-->
+<!--[if IE 9 ]><html class="ie v9" ng-app="CBApp" itemscope itemtype="http://schema.org/Person" ng-controller="MainCtrl as Main"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" ng-app="CBApp" itemscope itemtype="http://schema.org/Person" ng-controller="MainCtrl as Main">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110935111-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-110935111-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="fragment" content="!">
+    <base href="/">
+    <title ng-bind="Main.page.title">Catalin Besleaga | Front-end Engineer Iasi</title>
+    <meta name="description" content="I’m Catalin Besleaga -  a front-end engineer with 8+ years of professional experience. #html5 #css #js from Chisnau, Moldova">
+    <meta name="keywords" content="Catalin, Besleaga, react, angular, front-end engineer, Javascript, Iasi">
+    <meta itemprop="name" content="Catalin Besleaga | Front-end Engineer Iasi">
+    <meta itemprop="description" content="I’m a front-end engineer with 8+ years of professional experience. #html5 #css #js">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CatalinBesleaga">
+    <meta name="twitter:creator" content="@CatalinBesleaga">
+    <meta name="twitter:title" content="Catalin Besleaga | Front-end Engineer Iasi">
+    <meta name="twitter:description" content="I’m a front-end engineer with 8+ years of professional experience. #html5 #css #js">
+    <meta property="og:url" content="http://catalinbesleaga.co/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Catalin Besleaga | Front-end Engineer Iasi">
+    <meta property="og:description" content="I’m a front-end engineer with 8+ years of professional experience. #html5 #css #js">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CB">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#01617d">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="http://catalinbesleaga.co/">
+    <link rel="stylesheet" href="/css/dist/style.min.css">
+    <noscript>
+        <link rel="stylesheet" href="/css/dist/fallback.css">
+    </noscript>
+    <!-- <link rel="stylesheet" href="/assets/dist/{{ config.app_css_file }}">
+    <noscript>
+        <link rel="stylesheet" href="/css/dist/fallback.css">
+    </noscript> -->
+    <!--[if lt IE 9]><link rel="stylesheet" href="css/fallback.css"><![endif]-->
+</head>
+
+<body detect-browser>
+    <noscript>
+        <div class="fallback">
+            <div class="logo"></div>
+            <section>
+                <h1>Catalin Besleaga</h1>
+                <h2>FRONT-END ENGINEER</h2>
+                <a href="mailto:me@catalinbesleaga.co">me@catalinbesleaga.co</a>
+                <h3>Iasi RO</h3>
+                <p> For full functionality of this website it is necessary to
+                    <strong>enable JavaScript</strong>.
+                    <br> Here are the
+                    <a href="http://www.enable-javascript.com" target="_blank" rel="noopener noreferrer">instructions how to enable JavaScript in your web browser</a>. </p>
+            </section>
+        </div>
+    </noscript>
+    <!--[if lt IE 9]><div class="fallback">
+    <div class="logo"></div>
+    <section>
+        <h1>Catalin Besleaga</h1>
+        <h2>FRONT-END ENGINEER</h2>
+        <a href="mailto:me@catalinbesleaga.co">me@catalinbesleaga.co</a>
+        <h3>Iasi RO</h3>
+        <p>
+            You are using an <strong>outdated</strong> browser.<br>
+            Please <a href="http://browsehappy.com/" target="_blank" rel="noopener noreferrer">upgrade your browser</a> to improve your experience.
+        </p>
+    </section>
+    </div><![endif]-->
+    <header class="head" intro>
+        <canvas></canvas>
+        <div class="trigger" ng-if="Main.page.previous" ng-class="{ 'open': Main.menu }" ng-click="Main.toggle('menu')" trigger>
+            <div class="burger">
+                <span class="top"></span>
+                <span class="center"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
+        <a href="/" class="logo" cb-logo></a>
+    </header>
+    <div class="container">
+        <main>
+            <div class="view" ng-view ng-class="Main.page.current"></div>
+        </main>
+    </div>
+    <div class="menu" ng-if="Main.menu">
+        <nav>
+            <ul>
+                <li ng-class="{ 'active': Main.isActive('') }">
+                    <a href="/" ng-click="Main.toggle('menu')">home</a>
+                </li>
+                <!-- <li ng-class="{ 'active': Main.isActive('portfolio') }">
+                    <a href="/portfolio" ng-click="Main.toggle('menu')">portfolio</a>
+                </li> -->
+                <li ng-class="{ 'active': Main.isActive('about') }">
+                    <a href="/about" ng-click="Main.toggle('menu')">about</a>
+                </li>
+                <li ng-class="{ 'active': Main.isActive('contact') }">
+                    <a href="/contact" ng-click="Main.toggle('menu')">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <footer>
+            <hr>
+            <div class="info">
+                <a href="mailto:catalinbesleagdev@gmail.com">catalinbesleagdev@gmail.com</a>
+            </div>
+            <p class="details">
+                <small>© {{ Main.year }} - Catalin Besleaga.
+            </p>
+        </footer>
+    </div>
+    <script>
+        function deferJS() {
+            var main = document.createElement('script');
+            // main.src = 'assets/dist/{{ config.app_js_file }}';
+            main.src = 'js/app.c752c8f0779f8c85beac.bundle.js';
+            document.body.appendChild(main);
+        }
+        if (window.addEventListener) window.addEventListener('load', deferJS, false);
+        else if (window.attachEvent) window.attachEvent('onload', deferJS);
+        else window.onload = deferJS;
+    </script>
+</body>
+
+</html>

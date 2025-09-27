@@ -1,0 +1,81 @@
+{
+  "name": "cb",
+  "version": "1.0.0",
+  "description": "$ python3 -m http.server 8000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --env.production=true",
+    "build:dev": "webpack --env.production=true",
+    "dev": "webpack --watch --env.production=false",
+    "server": "./server/venv/bin/python app.py develop",
+    "deploy": "./server/venv/bin/python deploy_ssh.py",
+    "logs": "./server/venv/bin/python log_ssh.py"
+  },
+  "engines": {
+    "node": "^14.17.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/katalonne/cb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/katalonne/cb/issues"
+  },
+  "homepage": "https://gitlab.com/katalonne/cb#README",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-angularjs-annotate": "^0.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^0.5.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "jshint": "^2.9.5",
+    "manifest-revision-webpack-plugin": "^0.4.1",
+    "ngtemplate-loader": "^1.3.1",
+    "postcss-loader": "^2.0.8",
+    "run-sequence": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "tiny-lr": "^1.0.5",
+    "webpack": "^2.2.1",
+    "webpack-bundle-tracker": "^0.2.0",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.2.32",
+    "angular-animate": "^1.2.32",
+    "angular-route": "^1.2.32",
+    "autoprefixer": "^7.1.6",
+    "bezier-easing": "^2.0.3",
+    "cssnano": "^3.10.0",
+    "dotenv-webpack": "^1.5.4",
+    "expose-loader": "^0.7.4",
+    "gsap": "^1.20.3",
+    "ismobilejs": "^0.4.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0"
+  }
+}

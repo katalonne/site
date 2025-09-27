@@ -1,0 +1,21 @@
+<article class="portfolio-project" ng-repeat="project in Portfolio.projects" ng-class="{ 'morph-project': project.selected }"
+    project-animation>
+    <figure class="cover" ng-click="Portfolio.selectProject(project, true)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346 400" perpetual-motion="{{ $index }}">
+            <defs>
+                <clipPath id="clip-shape-project">
+                    <polygon points="342,297.5 173,395 4,297.5 4,102.5 173,5 342,102.5" />
+                </clipPath>
+            </defs>
+            <image class="body" x="-7.734%" y="0" width="115.47%" height="100%" ng-xlink-href="{{ project.cover }}" xlink:href=""
+                clip-path="url({{ Main.page.url }}#clip-shape-project)" />
+            <path class="stroke" fill="#006B6C" d="M173 0L0 100v200l173 100l173-100V100L173 0z M342 297.5L173 395L4 297.5v-195L173 5l169 97.5V297.5z"
+            />
+        </svg>
+        <img class="logo" ng-src="{{ project.logo }}" alt="{{ project.title }}" title="{{ project.title }}">
+    </figure>
+    <a href="{{ project.url }}" class="info" ng-click="Portfolio.selectProject(project)">
+        <h2 ng-bind-html="Main.trustHtml(project.title)"></h2>
+        <h3 ng-bind-html="Main.trustHtml(project.subtitle)"></h3>
+    </a>
+</article>

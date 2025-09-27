@@ -1,0 +1,29 @@
+<div>
+    <div class="documents__header">
+        <h1 class="documents__title">Add documents to agenda items</h1>
+        <div class="documents__close">✕</div>
+    </div>
+    <div class="documents__dropArea">
+        <div class="documents__dropArea__drag">
+            <input class="file-upload-input" type="file" accept="image/*">
+            <div class="documents__dropArea__drag__sign"><i class="material-icons">+</i></div>
+            <div class="documents__dropArea__drag__text">Drop new documents here</div>
+        </div>
+        <div class="documents__dropArea__browse">
+            or <span onclick="$('.file-upload-input').trigger( 'click' )" class="documents__dropArea__browse__text">Browser your computer</span>
+        </div>
+    </div>
+    <div class="documents__availability__counter">Available documents (<%= documents.length %>)</div>
+    <div class="documents__availability__docs">
+        <% _.map(documents, function(document,i) { %>
+            <div class="documents__content__item">
+                <%= document.name %>
+                    <label class="control control--checkbox">
+                    <input type="checkbox"/>
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <% }); %>
+    </div>
+    <button class="material-ripple btn btn--blue documents__addbutton">Add Selected Items to Agenda</button>
+</div>

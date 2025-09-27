@@ -1,0 +1,476 @@
+/*==========
+ * MODULES *
+===========*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background: transparent; }
+  a:active, a:hover {
+    outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg {
+  display: block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+  input[type="checkbox"], input[type="radio"] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html,
+body,
+div,
+main,
+span,
+object,
+iframe,
+img,
+tt,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+audio,
+video {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none; }
+
+p,
+a,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -moz-user-select: -moz-text;
+  -ms-user-select: text;
+  user-select: text; }
+
+::-moz-selection {
+  color: #E4EDF4;
+  background-color: #003663; }
+
+::selection {
+  color: #E4EDF4;
+  background-color: #003663; }
+
+/*===========
+ * PARTIALS *
+============*/
+/**
+ *	TYPESETTING
+ *
+ *	Author:   Catalin Besleaga
+ *	Date:     03 August 2017
+ *	Website:  catalinbesleaga.co
+ *
+ *	Modular Scale - http://modularscale.com/scale/?px1=16&px2=640&ra1=1.618&ra2=0
+ *	16px @ 1:1.618 [16 = base font-size]
+ *	640px @ 1:1.618 [640 = article max-width]
+ *
+ *	http://alistapart.com/articles/more-meaningful-typography/
+ *	http://typecast.com/blog/a-more-modern-scale-for-web-typography
+ *
+ *	NOTE: font-face in base64 commit: f88de52
+ */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/css/fonts/proximanova/proximanova-regular-latin.woff") format("woff"), url("/css/fonts/proximanova/proximanova-regular-latin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/css/fonts/proximanova/proximanova-semibold-latin.woff") format("woff"), url("/css/fonts/proximanova/proximanova-semibold-latin.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/css/fonts/lato/lato-thin-latin.woff") format("woff"), url("/css/fonts/lato/lato-thin-latin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/css/fonts/lato/lato-light-latin.woff") format("woff"), url("/css/fonts/lato/lato-light-latin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/css/fonts/lato/lato-light-italic-latin.woff") format("woff"), url("/css/fonts/lato/lato-light-italic-latin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+a {
+  color: #016EA0;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; }
+  a:visited {
+    color: #003663; }
+
+strong {
+  font-weight: bold; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #757575; }
+
+h1 {
+  font-size: 2.229rem;
+  color: #016EA0; }
+  @media only screen and (min-width: 30em) {
+    h1 {
+      font-size: 2.618rem; } }
+  h1 a {
+    color: #016DC6; }
+    h1 a:visited {
+      color: #003663; }
+
+h2 {
+  font-size: 1.618rem; }
+
+h3 {
+  font-size: 1.378rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 0.852rem; }
+
+h6 {
+  font-size: 0.618rem;
+  color: #016EA0; }
+
+hr {
+  height: 1px;
+  border: 0;
+  background: #e0e0e0; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.time {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 0.852rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #757575; }
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 87.5%;
+  overflow: hidden; }
+  @media only screen and (min-width: 48em) {
+    html {
+      font-size: 100%; } }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 18px; } }
+
+body {
+  width: 100%;
+  height: 100%;
+  font: 100%/1.5 "Proxima Nova", Helvetica, Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  background: #E4EDF4; }
+  @media only screen and (min-width: 75em) {
+    body {
+      color: #474747; } }
+  body:after {
+    content: "phones";
+    display: none; }
+    @media only screen and (min-width: 48em) {
+      body:after {
+        content: "tablets"; } }
+    @media only screen and (min-width: 62em) {
+      body:after {
+        content: "desktops"; } }
+    @media only screen and (min-width: 75em) {
+      body:after {
+        content: "wide-screen"; } }
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch; }
+
+main {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 55px;
+  display: block; }
+  @media only screen and (min-width: 48em) {
+    main {
+      padding-top: 0;
+      padding-left: 100px; } }
+  @media only screen and (min-width: 62em) {
+    main {
+      padding-left: 120px; } }
+  main .view {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative; }
+  @media only screen and (min-width: 48em) {
+    .wrapper {
+      width: 87%; } }
+  @media only screen and (min-width: 75em) {
+    .wrapper {
+      width: 78%; } }
+  .wrapper.wider {
+    max-width: 100%; }
+    @media only screen and (min-width: 75em) {
+      .wrapper.wider {
+        width: 87%; } }
+
+.clear {
+  clear: both; }
+
+body {
+  display: table !important; }
+
+.head,
+.container,
+.menu {
+  display: none !important; }
+
+noscript {
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+.fallback {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  cursor: default; }
+  .fallback .logo {
+    width: 220px;
+    height: 220px;
+    background: url(/img/logo-ie8.png) no-repeat center center;
+    margin-bottom: 20px;
+    display: inline-block; }
+  .fallback h1,
+  .fallback h2 {
+    margin: 0; }
+  .fallback h1 {
+    font-weight: lighter; }
+  .fallback h2 {
+    font-size: 1.35rem; }
+  .fallback h3 {
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    margin-left: 6.5%;
+    display: inline-block; }
+  .fallback p {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-style: italic; }

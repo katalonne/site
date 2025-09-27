@@ -1,0 +1,54 @@
+<figure class="cover">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346 400">
+        <defs>
+            <clipPath id="clip-shape">
+                <polygon points="342,297.5 173,395 4,297.5 4,102.5 173,5 342,102.5" />
+            </clipPath>
+        </defs>
+        <image class="body" x="-7.734%" y="0" width="115.47%" height="100%" xlink:href="{{ Portfolio.project.cover }}" clip-path="url({{Main.page.url}}#clip-shape)"
+        />
+    </svg>
+    <img class="logo" ng-src="{{ Portfolio.project.logo }}" alt="{{ Portfolio.project.title }}" title="{{ Portfolio.project.title }}">
+</figure>
+<section class="wrapper wider">
+    <h1 ng-bind-html="Main.trustHtml(Portfolio.project.title)"></h1>
+    <section class="description">
+        <h2 ng-bind-html="Main.trustHtml(Portfolio.project.intro)"></h2>
+        <p ng-bind-html="Main.trustHtml(Portfolio.project.description)"></p>
+        <a ng-href="{{ Portfolio.project.link }}" class="button" target="_blank" rel="noopener noreferrer">
+            <span class="hex-l-r">
+                <span class="text">SEE IT LIVE</span>
+            </span>
+        </a>
+    </section>
+    <div class="device-screen">
+        <div class="triangle"></div>
+        <img ng-repeat="screen in Portfolio.project.screen" ng-src="{{ screen.img }}" ng-class="screen.type" alt="{{ screen.alt }}"
+            title="{{ screen.alt }}">
+    </div>
+    <div class="info">
+        <section ng-if="Portfolio.project.role">
+            <h3>Role</h3>
+            <p ng-bind-html="Main.trustHtml(Portfolio.project.role)"></p>
+        </section>
+        <section ng-if="Portfolio.project.released">
+            <h3>Released</h3>
+            <p ng-bind-html="Main.trustHtml(Portfolio.project.released)"></p>
+        </section>
+        <section ng-if="Portfolio.project.technologies">
+            <h3>Technologies</h3>
+            <p ng-bind-html="Main.trustHtml(Portfolio.project.technologies)"></p>
+        </section>
+    </div>
+    <div class="screenshots">
+        <img class="screenshot" ng-repeat="screenshot in Portfolio.project.screenshots" ng-src="{{ screenshot.img }}" ng-class="screenshot.type"
+            alt="{{ screenshot.alt }}" title="{{ screenshot.alt }}">
+    </div>
+    <footer>
+        <a href="/portfolio" class="button">
+            <span class="hex-l-r">
+                <span class="text">BACK</span>
+            </span>
+        </a>
+    </footer>
+</section>

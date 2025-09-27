@@ -1,0 +1,5 @@
+# install
+nvm install 14
+nvm use 14
+npm run dev
+npx http-server .

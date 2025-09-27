@@ -1,0 +1,32 @@
+<div>
+        <% if (page === "appointments") { %>
+            <% _.map(names, function(name,i) { %>
+                <div class="main__row">
+                    <div class="main__index">
+                        <%= i+1 %>
+                    </div>
+                    <div class="main__name">
+                        <%= name %>
+                    </div>
+                </div>
+            <% }); %>
+        <% } %>
+    
+        <% if (page === "meetings") { %>
+            <% _.map(names, function(name,i) { %>
+                <a href="/meeting/<%= name[0] %>" class="material-ripple main__row">
+                        <div class="main__index">
+                            <%= i+1 %>
+                        </div>
+                        <div class="main__name">
+                            <%= name[0] %>
+                        </div>
+                    </a>
+            <% }); %>
+            <div class="main__row">
+                <button class="material-ripple btn btn--blue main__button">Add</button>
+            </div>
+        <% } %>
+        
+        
+    </div>
